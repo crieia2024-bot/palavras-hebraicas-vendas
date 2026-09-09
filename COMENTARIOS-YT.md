@@ -10,9 +10,9 @@ As **3 primeiras linhas** são o que aparece antes do "Ler mais" — o link **pr
 ## 1. Padrão — serve para qualquer vídeo de estudo bíblico
 
 ```
-📖 Reuni o significado de 400 palavras do hebraico bíblico em um material completo com PDF (715 págs) + Mini App no celular.
+📖 Reuni o significado e a *pronúncia em áudio* de 400 palavras do hebraico bíblico em um material completo com PDF (715 págs) + Mini App no celular.
 
-*PALAVRAS HEBRAICAS* — número de Strong, raiz original e o que a tradução em português escondeu.
+*PALAVRAS HEBRAICAS* — áudio com a pronúncia real, número de Strong, raiz original e significado profundo.
 👉 https://palavras-hebraicas-vendas.vercel.app
 
 Coloquei por *R$ 19,90*, um valor simbólico de apoio. Os vídeos aqui continuam 100% gratuitos, e quem puder adquirir é quem ajuda a manter as pesquisas e gravações semanais no ar ✝️
@@ -23,12 +23,12 @@ Coloquei por *R$ 19,90*, um valor simbólico de apoio. Os vídeos aqui continuam
 ## 2. Para vídeo sobre uma palavra específica (ex: Shalom, Chesed, Ruach, Shema)
 
 ```
-📖 Se esse estudo te edificou: o dicionário completo tem mais de 400 palavras do Antigo Testamento explicadas com essa mesma profundidade.
+📖 Se esse estudo te edificou: o dicionário completo tem mais de 400 palavras do Antigo Testamento explicadas com essa mesma profundidade e com *áudio para você escutar a pronúncia correta*.
 
-*PALAVRAS HEBRAICAS* · 715 páginas + Mini App Interativo
+*PALAVRAS HEBRAICAS* · 715 páginas + Mini App com Áudio de Pronúncia
 👉 https://palavras-hebraicas-vendas.vercel.app
 
-Com número de Strong, contexto cultural e aplicação prática para você usar nas suas aulas e estudos.
+Com áudio, número de Strong, contexto cultural e aplicação prática para você usar nas suas aulas e estudos.
 Deixei por R$ 19,90 como contribuição simbólica para o canal ✝️
 ```
 
@@ -37,9 +37,9 @@ Deixei por R$ 19,90 como contribuição simbólica para o canal ✝️
 ## 3. Para pregações, aulas de Escola Dominical e teologia
 
 ```
-📖 Quer preparar aulas e pregações com profundidade no hebraico sem precisar passar anos estudando gramática?
+📖 Quer preparar aulas e pregações com profundidade no hebraico e aprender a pronunciar cada palavra corretamente?
 
-*PALAVRAS HEBRAICAS* · 400 verbetes de A a Z + App de busca rápida no celular
+*PALAVRAS HEBRAICAS* · 400 verbetes com áudio de pronúncia + PDF 715 págs + App no celular
 👉 https://palavras-hebraicas-vendas.vercel.app
 
 R$ 19,90, pagamento único, apoia diretamente os novos vídeos do canal ✝️
@@ -50,8 +50,8 @@ R$ 19,90, pagamento único, apoia diretamente os novos vídeos do canal ✝️
 ## 4. Curto — para Shorts / Reels
 
 ```
-📖 Dicionário Palavras Hebraicas + Mini App (715 páginas): https://palavras-hebraicas-vendas.vercel.app
-400 palavras com Strong e raiz original
+📖 Dicionário Hebraico + Mini App com Áudio (715 págs): https://palavras-hebraicas-vendas.vercel.app
+400 palavras com áudio de pronúncia, Strong e raiz original
 R$ 19,90 — valor simbólico, apoia o canal ✝️
 ```
 
@@ -62,7 +62,7 @@ R$ 19,90 — valor simbólico, apoia o canal ✝️
 Responda direto em quem perguntar:
 
 ```
-Tem sim! Reuni as 400 palavras em um e-book de 715 páginas com acesso ao Mini App interativo de busca 👉 https://palavras-hebraicas-vendas.vercel.app
+Tem sim! Reuni as 400 palavras em um e-book de 715 páginas com acesso ao Mini App interativo com áudio de pronúncia 👉 https://palavras-hebraicas-vendas.vercel.app
 Fiz por R$ 19,90 como um valor simbólico para ajudar a manter o canal.
 Qualquer dúvida pode me chamar por aqui ✝️
 ```
