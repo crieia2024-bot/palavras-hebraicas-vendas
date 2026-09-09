@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Palavras Hebraicas — Dicionário Devocional & Mini App Interativo</title>
+<meta name="description" content="400 palavras do hebraico bíblico explicadas com número de Strong, raiz e significado profundo para seus estudos bíblicos. 715 páginas + Mini App interativo por R$ 19,90.">
+<meta property="og:title" content="Palavras Hebraicas — Dicionário Devocional do Hebraico Bíblico">
+<meta property="og:description" content="Descubra a profundidade do texto original no seu celular. 400 palavras explicadas + Mini App leitor interativo por R$ 19,90.">
+<meta property="og:image" content="img/capa.jpg?v=1">
+<meta property="og:type" content="product">
+<link rel="icon" type="image/png" href="favicon.png?v=1">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1">
+<meta name="theme-color" content="#0d1722">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   PÁGINA DE VENDAS — PALAVRAS HEBRAICAS (CANAL BÍBLICO)
+   Mobile primeiro. Visual devocional / pergaminho / azul-ardósia e dourado.
+   ========================================================================== */
+:root{
+  --azul-noite:#0b131c; --azul-escuro:#122130; --azul:#1c354d; --azul-claro:#2b4d6e;
+  --ouro:#c59b27; --ouro-claro:#eecb70; --ouro-fino:#fbf0cf;
+  --creme:#faf7f2; --creme-cartao:#f2ebe0; --pergaminho:#f8f2e6;
+  --tinta:#141f2b; --tinta-fraca:#485c70;
+  --alerta:#a33b1f; --destaque:#1b6348;
+  --serif:"Cinzel",Georgia,serif;
+  --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--sans); font-size:18px; line-height:1.62;
+  color:var(--tinta); background:var(--creme);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:96px; /* espaço da barra fixa do celular */
+}
+img{max-width:100%;height:auto;display:block}
+.env{width:100%;max-width:660px;margin:0 auto;padding:0 20px}
+
+h1,h2,h3{font-family:var(--serif);line-height:1.15;letter-spacing:.2px}
+h1{font-size:34px;font-weight:800}
+h2{font-size:27px;font-weight:700;color:var(--azul-escuro);margin-bottom:18px}
+h3{font-size:20px;font-weight:700;color:var(--azul-escuro)}
+p{margin-bottom:18px}
+strong{font-weight:700;color:var(--azul-escuro)}
+section{padding:52px 0}
+
+/* ------------------------------------------------------------------ hero / topo */
+.hero{
+  background:linear-gradient(175deg,#16283a 0%,var(--azul-noite) 65%,#070d14 100%);
+  color:#fff; text-align:center; padding:38px 0 46px;
+}
+.logo{
+  width:96px;height:96px;margin:0 auto 16px;border-radius:50%;
+  border:2.5px solid var(--ouro-claro);
+  box-shadow:0 8px 24px rgba(0,0,0,.6);
+}
+.selo{
+  display:inline-block;border:1.5px solid var(--ouro-claro);color:var(--ouro-claro);
+  font-family:var(--serif);font-size:12px;letter-spacing:2.4px;text-transform:uppercase;
+  padding:8px 18px;border-radius:40px;margin-bottom:20px;font-weight:700;
+}
+.hero h1{color:var(--ouro-claro);margin-bottom:16px}
+.hero .sub{font-size:19px;color:#d8e4ee;margin-bottom:24px;font-weight:400}
+
+.hero-dupla{
+  display:flex;align-items:center;justify-content:center;gap:16px;margin:10px auto 26px;
+  max-width:440px;
+}
+.hero-dupla .capa{
+  width:50%;max-width:180px;border-radius:6px;
+  box-shadow:0 16px 36px rgba(0,0,0,.6);
+}
+.hero-dupla .app-preview{
+  width:46%;max-width:165px;border-radius:12px;
+  border:2px solid var(--ouro);
+  box-shadow:0 16px 36px rgba(0,0,0,.65);
+}
+
+.combo-tag{
+  background:rgba(197,155,39,.18);border:1px solid var(--ouro);color:var(--ouro-fino);
+  font-size:14px;font-weight:700;padding:6px 14px;border-radius:20px;display:inline-block;
+  margin-bottom:18px;
+}
+
+.hero .marca{
+  font-family:var(--serif);font-size:13px;letter-spacing:2.6px;
+  text-transform:uppercase;color:var(--ouro);margin-top:26px;
+}
+
+/* ----------------------------------------------------------------- botão */
+.btn{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:100%;min-height:66px;padding:16px 22px;
+  background:linear-gradient(180deg,#e5be49 0%,var(--ouro) 100%);
+  color:var(--azul-noite);
+  font-family:var(--sans);font-size:20px;font-weight:800;line-height:1.25;
+  text-align:center;text-decoration:none;
+  border:0;border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+  transition:transform .12s ease, box-shadow .12s ease;
+  cursor:pointer;
+}
+.btn:active{transform:translateY(2px);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.btn small{display:block;font-size:14px;font-weight:600;opacity:.88;margin-top:3px}
+.sob-btn{font-size:15px;color:#b9cbd9;margin-top:14px;line-height:1.5}
+.preco{margin:6px 0 22px}
+.preco .de{font-size:17px;color:#8fa7bb;text-decoration:line-through}
+.preco .por{font-family:var(--serif);font-size:44px;font-weight:800;color:#fff;display:block;line-height:1.1}
+.preco .vez{font-size:15px;color:#d8e4ee}
+
+/* -------------------------------------------------------------------- dor */
+.dor{background:var(--creme-cartao)}
+.dor ul{list-style:none;margin:0 0 24px}
+.dor li{
+  position:relative;padding-left:38px;margin-bottom:18px;font-size:18px;
+}
+.dor li::before{
+  content:"✕";position:absolute;left:0;top:-1px;
+  width:26px;height:26px;border-radius:50%;
+  background:var(--alerta);color:#fff;font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.frase{
+  border-left:5px solid var(--ouro);background:#fff;
+  padding:20px 22px;margin:28px 0;font-size:19px;line-height:1.55;
+  border-radius:0 8px 8px 0;
+}
+
+/* ----------------------------------------------------------- app destaque */
+.app-section{
+  background:linear-gradient(180deg,#122130 0%,#0c1622 100%);
+  color:#fff;text-align:center;
+}
+.app-section h2{color:var(--ouro-claro)}
+.app-section p{color:#d5e2ec}
+.app-mockup-wrapper{
+  margin:28px auto;max-width:540px;
+}
+.app-mockup-wrapper img{
+  border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.6);
+  border:1.5px solid rgba(197,155,39,.4);margin:0 auto;
+}
+.app-badges{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;text-align:left;
+}
+.app-badge-item{
+  background:rgba(255,255,255,.05);border:1px solid rgba(197,155,39,.25);
+  border-radius:8px;padding:14px;font-size:15px;
+}
+.app-badge-item b{color:var(--ouro-claro);display:block;margin-bottom:4px;font-size:16px}
+
+/* --------------------------------------------------------------- solução */
+.solucao ul{list-style:none}
+.solucao li{
+  position:relative;padding-left:38px;margin-bottom:18px;font-size:18px;
+}
+.solucao li::before{
+  content:"✓";position:absolute;left:0;top:-1px;
+  width:26px;height:26px;border-radius:50%;
+  background:var(--destaque);color:#fff;font-size:15px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ------------------------------------------------------------- destaques */
+.pilares{display:grid;gap:16px;margin-top:26px}
+.pilar{
+  background:#fff;border:1px solid rgba(197,155,39,.3);
+  border-left:6px solid var(--ouro);border-radius:10px;padding:22px;
+}
+.pilar h3{margin-bottom:8px;font-size:19px}
+.pilar p{margin:0;font-size:17px;color:var(--tinta-fraca)}
+
+/* ----------------------------------------------------------------- prova */
+.dentro{background:var(--azul-escuro);color:#fff}
+.dentro h2{color:var(--ouro-claro)}
+.dentro p{color:#d5e2ec}
+.paginas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.paginas figure{margin:0}
+.paginas img{border-radius:6px;box-shadow:0 10px 26px rgba(0,0,0,.55)}
+.paginas figcaption{
+  font-size:13px;color:var(--ouro-claro);margin-top:8px;text-align:center;
+  line-height:1.4;
+}
+
+/* ---------------------------------------------------------------- números */
+.numeros{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.num{background:var(--creme-cartao);border-radius:10px;padding:20px 14px;text-align:center}
+.num b{display:block;font-family:var(--serif);font-size:34px;color:var(--azul);line-height:1}
+.num span{font-size:15px;color:var(--tinta-fraca);display:block;margin-top:6px}
+
+/* ----------------------------------------------------------------- canal */
+.canal{background:var(--azul);color:#fff;text-align:center}
+.canal h2{color:var(--ouro-claro)}
+.canal p{color:#e2ecf5;font-size:18px}
+
+/* -------------------------------------------------------------- fechamento */
+.fechar{text-align:center;background:var(--creme-cartao)}
+.fechar .btn{margin-top:24px}
+.garantia{
+  background:#fff;border:2px dashed var(--ouro);border-radius:12px;
+  padding:24px;margin-top:30px;text-align:left;
+}
+.garantia h3{margin-bottom:10px}
+.garantia p{margin:0;font-size:17px;color:var(--tinta-fraca)}
+
+/* ------------------------------------------------------- barra fixa mobile */
+.barra{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:rgba(11,19,28,.97);backdrop-filter:blur(8px);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  box-shadow:0 -6px 22px rgba(0,0,0,.45);
+}
+.barra .btn{min-height:58px;font-size:19px}
+.barra .linha{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  color:#d5e2ec;font-size:14px;margin-bottom:8px;
+}
+.barra .linha b{color:#fff;font-size:18px;font-family:var(--serif)}
+
+footer{background:var(--azul-noite);color:#8ea4b8;text-align:center;
+  font-size:14px;padding:34px 0}
+footer a{color:var(--ouro-claro)}
+
+/* ---------------------------------------------------------------- desktop */
+@media (min-width:760px){
+  body{font-size:19px;padding-bottom:0}
+  h1{font-size:46px} h2{font-size:34px}
+  .env{max-width:760px}
+  section{padding:76px 0}
+  .hero{padding:60px 0 70px}
+  .hero-dupla{max-width:540px}
+  .hero-dupla .capa{max-width:220px}
+  .hero-dupla .app-preview{max-width:205px}
+  .logo{width:116px;height:116px}
+  .btn{width:auto;min-width:420px;margin:0 auto;font-size:22px;min-height:72px}
+  .preco .por{font-size:54px}
+  .app-badges{grid-template-columns:repeat(4,1fr)}
+  .pilares{grid-template-columns:1fr 1fr}
+  .paginas{grid-template-columns:repeat(3,1fr)}
+  .numeros{grid-template-columns:repeat(4,1fr)}
+  .barra{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="env">
+    <img class="logo" src="img/logo.png?v=1" alt="Logo Palavras Hebraicas">
+    <div class="selo">Estudo Bíblico & Raízes Originais</div>
+    
+    <div class="combo-tag">📖 E-book Completo + 📱 Mini App Interativo</div>
+
+    <div class="hero-dupla">
+      <img class="capa" src="img/capa.jpg?v=1" alt="Capa do livro Palavras Hebraicas">
+      <img class="app-preview" src="img/app_leitor_mobile.jpg?v=1" alt="Mini App leitor interativo no celular">
+    </div>
+
+    <h1>Você não precisa saber hebraico para entender a profundidade da Bíblia</h1>
+    <p class="sub">400 palavras do Antigo Testamento com número de Strong, raiz e o que a tradução em português escondeu — direto no livro e no aplicativo.</p>
+
+    <div class="preco">
+      <span class="de">R$ 47,00</span>
+      <span class="por">R$ 19,90</span>
+      <span class="vez">valor simbólico · à vista no PIX ou no cartão</span>
+    </div>
+
+    <a href="#comprar" class="btn">
+      QUERO O DICIONÁRIO + MINI APP
+      <small>acesso imediato no celular e computador</small>
+    </a>
+    <p class="sob-btn">PDF com 715 páginas + Mini App Interativo<br>Valor simbólico para manter os estudos semanais do canal ✝️</p>
+    <div class="marca">Edição 2026</div>
+  </div>
+</header>
+
+<!-- ------------------------------------------------------------------ dor -->
+<section class="dor">
+  <div class="env">
+    <h2>Você já sentiu isso lendo as Escrituras?</h2>
+    <ul>
+      <li>Você lê um versículo conhecido e tem a certeza de que a palavra em português não traduz todo o peso do original.</li>
+      <li>Você ouve um pregador ou professor citar uma raiz hebraica bonita, mas não sabe onde conferir se aquilo é real ou invenção.</li>
+      <li>Você já tentou consultar léxicos teológicos acadêmicos, mas desistiu diante de páginas técnicas, cheias de termos em alemão e gramática indecifrável.</li>
+      <li>Você quer preparar uma aula de Escola Bíblica ou pregação com profundidade, mas tem medo de errar a pronúncia ou o sentido.</li>
+      <li>Você passa horas folheando concordâncias pesadas para entender uma única palavra de um versículo.</li>
+    </ul>
+
+    <div class="frase">
+      A riqueza do hebraico bíblico não foi feita para ficar trancada em bibliotecas acadêmicas. Foi feita para edificar a sua fé e enriquecer sua leitura diária.
+    </div>
+
+    <p>O hebraico é uma língua concreta e visual. Quando a Bíblia fala de <strong>Shalom</strong>, não é só "ausência de briga", é plenitude de vida. Quando fala de <strong>Chesed</strong>, não é só "misericórdia", é a fidelidade inegociável da aliança de Deus. Conhecer a palavra certa muda a forma como você lê o texto sagrado.</p>
+  </div>
+</section>
+
+<!-- ----------------------------------------------------------- app destaque -->
+<section class="app-section">
+  <div class="env">
+    <div class="selo" style="border-color:var(--ouro);color:var(--ouro-claro)">Tecnologia & Estudo</div>
+    <h2>O Mini App Interativo no seu Celular</h2>
+    <p>Além do PDF completo de 715 páginas, você ganha acesso instantâneo ao leitor interativo digital, pronto para usar no celular, tablet ou computador.</p>
+
+    <div class="app-mockup-wrapper">
+      <img src="img/app_desktop.jpg?v=1" alt="Aplicativo interativo Palavras Hebraicas">
+    </div>
+
+    <div class="app-badges">
+      <div class="app-badge-item">
+        <b>🔍 Busca Rápida</b>
+        Encontre qualquer palavra ou versículo em menos de 2 segundos.
+      </div>
+      <div class="app-badge-item">
+        <b>📑 Índice de A a Z</b>
+        Navegue facilmente pelas 22 letras do alfabeto hebraico.
+      </div>
+      <div class="app-badge-item">
+        <b>🔖 Marcador & Zoom</b>
+        Salve seus estudos favoritos e ajuste o zoom perfeito para leitura.
+      </div>
+      <div class="app-badge-item">
+        <b>📱 Sem Instalação</b>
+        Funciona direto no navegador do celular, leve e sem ocupar memória.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -------------------------------------------------------------- solução -->
+<section class="solucao">
+  <div class="env">
+    <h2>A Anatomia de Cada Verbete</h2>
+    <p>Cada uma das 400 palavras foi cuidadosamente estruturada para que você abra em qualquer página e saia sabendo algo que pode ensinar no domingo:</p>
+    <ul>
+      <li><strong>Cabeçalho Completo.</strong> A palavra em caracteres hebraicos, pontuação massorética (nikud), transliteração para leitura fácil e o número de Strong.</li>
+      <li><strong>A Raiz Triliteral.</strong> De onde a palavra nasceu e que imagem visual os antigos hebreus enxergavam nela.</li>
+      <li><strong>Contagem e Ocorrências.</strong> Quantas vezes aparece no Antigo Testamento e onde ela se concentra.</li>
+      <li><strong>O Texto-Âncora.</strong> Um versículo trabalhado com calma, mostrando exatamente o que a tradução em português fez e o que ficou de fora.</li>
+      <li><strong>O Que Muda.</strong> O parágrafo prático que resume como aquele significado transforma o entendimento do texto bíblico.</li>
+    </ul>
+
+    <div class="pilares">
+      <div class="pilar">
+        <h3>Rigor sem Complicação</h3>
+        <p>A precisão dos melhores léxicos internacionais com a linguagem acessível de quem ama a Palavra.</p>
+      </div>
+      <div class="pilar">
+        <h3>Número de Strong Conferido</h3>
+        <p>Todas as palavras trazem a numeração padrão para você cruzar com seus próprios softwares e Bíblias de estudo.</p>
+      </div>
+      <div class="pilar">
+        <h3>As 22 Letras do Alefbet</h3>
+        <p>Aberturas ilustradas para cada letra hebraica com seu significado pictográfico e valor espiritual.</p>
+      </div>
+      <div class="pilar">
+        <h3>Acesso Duplo: PDF + App</h3>
+        <p>Baixe o arquivo para ler offline e use o Mini App interativo quando quiser praticidade no celular.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------------------------------------------------------- prova -->
+<section class="dentro">
+  <div class="env">
+    <h2>Veja por dentro</h2>
+    <p>Exemplos reais das páginas do livro em alta resolução:</p>
+    <div class="paginas">
+      <figure>
+        <img src="img/p_chesed.jpg?v=1" alt="Verbete Chesed amor leal" loading="lazy">
+        <figcaption>חֶסֶד (Chesed) · Amor Leal</figcaption>
+      </figure>
+      <figure>
+        <img src="img/p_shalom.jpg?v=1" alt="Verbete Shalom integridade e paz" loading="lazy">
+        <figcaption>שָׁלוֹם (Shalom) · Plenitude</figcaption>
+      </figure>
+      <figure>
+        <img src="img/p_shema.jpg?v=1" alt="Verbete Shema ouvir e obedecer" loading="lazy">
+        <figcaption>שְׁמַע (Shema) · Ouvir Ativo</figcaption>
+      </figure>
+      <figure>
+        <img src="img/p_elohim.jpg?v=1" alt="Verbete Elohim Deus criador" loading="lazy">
+        <figcaption>אֱלֹהִים (Elohim) · Deus Criador</figcaption>
+      </figure>
+      <figure>
+        <img src="img/p_alefbet.jpg?v=1" alt="Tabela do alfabeto hebraico" loading="lazy">
+        <figcaption>Tabela do Alfabeto Hebraico</figcaption>
+      </figure>
+      <figure>
+        <img src="img/p_alef.jpg?v=1" alt="Abertura da letra Álef" loading="lazy">
+        <figcaption>Abertura da Letra Álef</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- -------------------------------------------------------------- números -->
+<section>
+  <div class="env">
+    <h2>O que você recebe</h2>
+    <div class="numeros">
+      <div class="num"><b>715</b><span>páginas</span></div>
+      <div class="num"><b>400</b><span>palavras-chave</span></div>
+      <div class="num"><b>22</b><span>letras explicadas</span></div>
+      <div class="num"><b>1</b><span>Mini App incluso</span></div>
+    </div>
+    <p style="margin-top:26px">Mais o índice remissivo em português, a tabela com as 22 letras do Alefbet e suas pronúncias, e o link de acesso imediato ao leitor interativo no celular.</p>
+  </div>
+</section>
+
+<!-- ---------------------------------------------------------------- canal -->
+<section class="canal">
+  <div class="env">
+    <h2>R$ 19,90 é um valor simbólico</h2>
+    <p>São 715 páginas de pesquisa com 400 verbetes minuciosos e um Mini App interativo desenvolvido exclusivamente para facilitar seus estudos.</p>
+    <p>Os vídeos e estudos bíblicos do canal continuam 100% gratuitos para todos. Mas pesquisar no texto original, produzir o material e manter a estrutura exige tempo e dedicação.</p>
+    <p><strong>Ao garantir o seu exemplar por R$ 19,90</strong>, você leva um material de consulta para a vida toda e ajuda diretamente o canal a continuar produzindo novos estudos bíblicos para milhares de pessoas.</p>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------ fechamento -->
+<section class="fechar" id="comprar">
+  <div class="env">
+    <h2>Comece a aprofundar seus estudos hoje</h2>
+    <p>Pelo valor de um lanche, você tem em mãos o significado original das palavras mais importantes do Antigo Testamento no seu bolso.</p>
+
+    <div class="preco" style="color:var(--tinta)">
+      <span class="de" style="color:var(--tinta-fraca)">R$ 47,00</span>
+      <span class="por" style="color:var(--azul-escuro)">R$ 19,90</span>
+      <span class="vez" style="color:var(--tinta-fraca)">pagamento único · à vista no PIX ou no cartão</span>
+    </div>
+
+    <a href="#comprar-checkout" class="btn">
+      QUERO O DICIONÁRIO + MINI APP
+      <small>acesso imediato por e-mail</small>
+    </a>
+
+    <div class="garantia">
+      <h3>Como você recebe</h3>
+      <p>Assim que o pagamento for confirmado, você recebe no seu e-mail o link para download do PDF completo (715 páginas) e o acesso ao Mini App interativo para abrir instantaneamente no seu celular, tablet ou computador.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <img src="img/logo.png?v=1" alt="" style="width:58px;height:58px;border-radius:50%;margin:0 auto 12px;opacity:.9">
+    <p>Palavras Hebraicas · Edição 2026</p>
+    <p style="margin-top:8px"><a href="#">Contato</a> · <a href="#">Termos de Uso</a> · <a href="#">Aviso Teológico</a></p>
+  </div>
+</footer>
+
+<!-- ------------------------------------------------------- barra fixa mobile -->
+<div class="barra">
+  <div class="linha">Dicionário Hebraico + App · <b>R$ 19,90</b></div>
+  <a href="#comprar" class="btn">GARANTIR ACESSO</a>
+</div>
+
+</body>
+</html>
