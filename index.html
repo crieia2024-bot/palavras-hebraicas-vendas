@@ -135,25 +135,148 @@ section{padding:52px 0}
 .app-section h2{color:var(--ouro-claro)}
 .app-section p{color:#d5e2ec}
 
-/* Galeria de 3 celulares do Mini App */
-.app-tripla-celular{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px auto 20px;max-width:620px;
+/* ------------------------------------------------ Carrosséis Touch & Snap */
+.carousel-wrap{
+  position:relative;
+  margin:20px -16px 14px;
 }
-.app-card-celular{
-  background:rgba(255,255,255,.04);border:1px solid rgba(197,155,39,.35);
-  border-radius:12px;padding:8px 8px 12px;display:flex;flex-direction:column;
+.carousel-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  gap:14px;
+  padding:10px 18px 16px;
+  scrollbar-width:none;
 }
-.app-card-celular img{
-  border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.6);
-  border:1px solid rgba(197,155,39,.25);width:100%;aspect-ratio:9/16;object-fit:cover;
-}
-.app-card-celular h4{
-  font-family:var(--serif);font-size:14px;color:var(--ouro-claro);margin:10px 0 4px;line-height:1.2;
-}
-.app-card-celular span{
-  font-size:12px;color:#c0d2e2;line-height:1.35;display:block;
+.carousel-track::-webkit-scrollbar{
+  display:none;
 }
 
+/* Item Carrossel App */
+.app-carousel-track .app-card-celular{
+  flex:0 0 82vw;
+  max-width:320px;
+  scroll-snap-align:center;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(197,155,39,.35);
+  border-radius:16px;
+  padding:12px 12px 16px;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box;
+  text-align:center;
+}
+.app-carousel-track .app-card-celular img{
+  border-radius:10px;
+  box-shadow:0 10px 24px rgba(0,0,0,.65);
+  border:1px solid rgba(197,155,39,.25);
+  width:100%;
+  aspect-ratio:9/16;
+  object-fit:cover;
+  display:block;
+}
+.app-card-celular h4{
+  font-family:var(--serif);
+  font-size:18px;
+  color:var(--ouro-claro);
+  margin:12px 0 6px;
+  line-height:1.25;
+}
+.app-card-celular span{
+  font-size:14px;
+  color:#c0d2e2;
+  line-height:1.4;
+  display:block;
+}
+
+/* Item Carrossel Páginas do Livro */
+.dentro{background:var(--azul-escuro);color:#fff}
+.dentro h2{color:var(--ouro-claro)}
+.dentro p{color:#d5e2ec}
+.paginas-carousel-track figure{
+  flex:0 0 84vw;
+  max-width:340px;
+  scroll-snap-align:center;
+  margin:0;
+  box-sizing:border-box;
+}
+.paginas-carousel-track img{
+  border-radius:8px;
+  box-shadow:0 12px 28px rgba(0,0,0,.65);
+  border:1px solid rgba(197,155,39,.3);
+  width:100%;
+  display:block;
+}
+.paginas-carousel-track figcaption{
+  font-size:14px;
+  color:var(--ouro-claro);
+  margin-top:10px;
+  text-align:center;
+  line-height:1.4;
+  font-weight:500;
+}
+
+/* Controles de Navegação (Setas e Pontos) */
+.carousel-nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:8px auto 4px;
+}
+.carousel-btn{
+  background:rgba(197,155,39,.2);
+  border:1px solid var(--ouro);
+  color:var(--ouro-claro);
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  font-size:24px;
+  font-family:inherit;
+  font-weight:bold;
+  line-height:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:all .2s ease;
+  touch-action:manipulation;
+  user-select:none;
+}
+.carousel-btn:active{
+  background:var(--ouro);
+  color:var(--azul-noite);
+  transform:scale(.94);
+}
+.carousel-dots{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.carousel-dots .dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,.25);
+  border:1px solid rgba(197,155,39,.4);
+  cursor:pointer;
+  transition:all .25s ease;
+}
+.carousel-dots .dot.active{
+  background:var(--ouro);
+  width:26px;
+  border-radius:13px;
+  box-shadow:0 0 10px rgba(197,155,39,.5);
+}
+.carousel-hint{
+  font-size:13px;
+  color:var(--ouro-claro);
+  margin:6px auto 0;
+  opacity:.95;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 .app-recursos-grid{
   display:grid;grid-template-columns:1fr;gap:14px;margin-top:24px;text-align:left;
 }
@@ -188,18 +311,6 @@ section{padding:52px 0}
 }
 .pilar h3{margin-bottom:8px;font-size:19px}
 .pilar p{margin:0;font-size:17px;color:var(--tinta-fraca)}
-
-/* ----------------------------------------------------------------- prova */
-.dentro{background:var(--azul-escuro);color:#fff}
-.dentro h2{color:var(--ouro-claro)}
-.dentro p{color:#d5e2ec}
-.paginas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
-.paginas figure{margin:0}
-.paginas img{border-radius:6px;box-shadow:0 10px 26px rgba(0,0,0,.55)}
-.paginas figcaption{
-  font-size:13px;color:var(--ouro-claro);margin-top:8px;text-align:center;
-  line-height:1.4;
-}
 
 /* ---------------------------------------------------------------- números */
 .numeros{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
@@ -251,9 +362,26 @@ footer a{color:var(--ouro-claro)}
   .logo{width:116px;height:116px}
   .btn{width:auto;min-width:420px;margin:0 auto;font-size:22px;min-height:72px}
   .preco .por{font-size:54px}
+  
+  .carousel-wrap{margin:28px 0 20px}
+  .app-carousel-track{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0;overflow-x:visible;
+  }
+  .app-carousel-track .app-card-celular{
+    flex:initial;max-width:100%;
+  }
+  .paginas-carousel-track{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:0;overflow-x:visible;
+  }
+  .paginas-carousel-track figure{
+    flex:initial;max-width:100%;
+  }
+  .carousel-nav, .carousel-hint{
+    display:none;
+  }
+
   .app-recursos-grid{grid-template-columns:1fr 1fr}
   .pilares{grid-template-columns:1fr 1fr}
-  .paginas{grid-template-columns:repeat(3,1fr)}
   .numeros{grid-template-columns:repeat(4,1fr)}
   .barra{display:none}
 }
@@ -315,23 +443,36 @@ footer a{color:var(--ouro-claro)}
     <h2>O que você faz no Mini App Interativo</h2>
     <p>Além do PDF completo com 715 páginas em alta definição, você recebe o Mini App pronto para abrir no celular, tablet ou computador, com recurso de áudio exclusivo:</p>
 
-    <!-- Galeria de 3 celulares com prints reais do app -->
-    <div class="app-tripla-celular">
-      <div class="app-card-celular">
-        <img src="img/app_audio_mobile.jpg?v=5" alt="Ouça a Pronúncia em Áudio no App">
-        <h4>1. Pronúncia em Áudio</h4>
-        <span>Escute o som e a pronúncia exata de cada palavra.</span>
+    <!-- Carrossel de Celulares do App -->
+    <div class="carousel-wrap">
+      <div class="carousel-track app-carousel-track" id="appCarouselTrack">
+        <div class="app-card-celular">
+          <img src="img/app_audio_mobile.jpg?v=6" alt="Ouça a Pronúncia em Áudio no App" loading="lazy">
+          <h4>1. Pronúncia em Áudio</h4>
+          <span>Escute o som e a pronúncia exata de cada palavra no original.</span>
+        </div>
+        <div class="app-card-celular">
+          <img src="img/app_busca_mobile.jpg?v=6" alt="Busca Rápida de Palavras e Strong" loading="lazy">
+          <h4>2. Busca Instantânea</h4>
+          <span>Busque por português, hebraico ou Strong em menos de 1s.</span>
+        </div>
+        <div class="app-card-celular">
+          <img src="img/app_indice_mobile.jpg?v=6" alt="Índice Visual das 22 Letras" loading="lazy">
+          <h4>3. Índice & Marcador</h4>
+          <span>Navegue de Álef a Tav e o app lembra onde você parou de ler.</span>
+        </div>
       </div>
-      <div class="app-card-celular">
-        <img src="img/app_busca_mobile.jpg?v=5" alt="Busca Rápida de Palavras e Strong">
-        <h4>2. Busca Rápida</h4>
-        <span>Busque por português, hebraico ou Strong em 1s.</span>
+
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="slideCarousel('appCarouselTrack', -1)" aria-label="Anterior">‹</button>
+        <div class="carousel-dots" id="appCarouselDots">
+          <span class="dot active" onclick="goToSlide('appCarouselTrack', 0)"></span>
+          <span class="dot" onclick="goToSlide('appCarouselTrack', 1)"></span>
+          <span class="dot" onclick="goToSlide('appCarouselTrack', 2)"></span>
+        </div>
+        <button class="carousel-btn" onclick="slideCarousel('appCarouselTrack', 1)" aria-label="Próximo">›</button>
       </div>
-      <div class="app-card-celular">
-        <img src="img/app_indice_mobile.jpg?v=5" alt="Índice Visual das 22 Letras">
-        <h4>3. Índice & Marcador</h4>
-        <span>Navegue de Álef a Tav e salva onde você parou.</span>
-      </div>
+      <div class="carousel-hint">👉 Deslize para o lado para ver todos os prints</div>
     </div>
 
     <div class="app-recursos-grid">
@@ -395,31 +536,48 @@ footer a{color:var(--ouro-claro)}
   <div class="env">
     <h2>Veja por dentro</h2>
     <p>Páginas reais do livro em alta resolução com arte ilustrada, índices e tabelas práticas:</p>
-    <div class="paginas">
-      <figure>
-        <img src="img/p_el_shaddai.jpg?v=5" alt="Página ilustrada El Shaddai Deus Todo Poderoso" loading="lazy">
-        <figcaption>אֵל שַׁדַּי (El Shaddai) · Título Ilustrado</figcaption>
-      </figure>
-      <figure>
-        <img src="img/p_chesed.jpg?v=5" alt="Verbete Chesed amor leal" loading="lazy">
-        <figcaption>חֶסֶד (Chesed) · Estrutura & Raiz</figcaption>
-      </figure>
-      <figure>
-        <img src="img/p_indice_passagens.jpg?v=5" alt="Índice de Passagens Bíblicas com número de Strong" loading="lazy">
-        <figcaption>Índice de Passagens Bíblicas</figcaption>
-      </figure>
-      <figure>
-        <img src="img/p_tabela_portugues.jpg?v=5" alt="Tabela Temática Português-Hebraico" loading="lazy">
-        <figcaption>Índice Português · Hebraico · Strong</figcaption>
-      </figure>
-      <figure>
-        <img src="img/p_alefbet.jpg?v=5" alt="Tabela do alfabeto hebraico" loading="lazy">
-        <figcaption>Tabela Geral do Alfabeto Hebraico</figcaption>
-      </figure>
-      <figure>
-        <img src="img/p_alef.jpg?v=5" alt="Abertura ilustrada da letra Álef" loading="lazy">
-        <figcaption>Abertura da Letra Álef</figcaption>
-      </figure>
+    <!-- Carrossel de Páginas do Livro -->
+    <div class="carousel-wrap">
+      <div class="carousel-track paginas-carousel-track" id="paginasCarouselTrack">
+        <figure>
+          <img src="img/p_el_shaddai.jpg?v=6" alt="Página ilustrada El Shaddai Deus Todo Poderoso" loading="lazy">
+          <figcaption>אֵל שַׁדַּי (El Shaddai) · Título Ilustrado</figcaption>
+        </figure>
+        <figure>
+          <img src="img/p_chesed.jpg?v=6" alt="Verbete Chesed amor leal" loading="lazy">
+          <figcaption>חֶסֶד (Chesed) · Estrutura & Raiz</figcaption>
+        </figure>
+        <figure>
+          <img src="img/p_indice_passagens.jpg?v=6" alt="Índice de Passagens Bíblicas com número de Strong" loading="lazy">
+          <figcaption>Índice de Passagens Bíblicas</figcaption>
+        </figure>
+        <figure>
+          <img src="img/p_tabela_portugues.jpg?v=6" alt="Tabela Temática Português-Hebraico" loading="lazy">
+          <figcaption>Índice Português · Hebraico · Strong</figcaption>
+        </figure>
+        <figure>
+          <img src="img/p_alefbet.jpg?v=6" alt="Tabela do alfabeto hebraico" loading="lazy">
+          <figcaption>Tabela Geral do Alfabeto Hebraico</figcaption>
+        </figure>
+        <figure>
+          <img src="img/p_alef.jpg?v=6" alt="Abertura ilustrada da letra Álef" loading="lazy">
+          <figcaption>Abertura da Letra Álef</figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="slideCarousel('paginasCarouselTrack', -1)" aria-label="Página anterior">‹</button>
+        <div class="carousel-dots" id="paginasCarouselDots">
+          <span class="dot active" onclick="goToSlide('paginasCarouselTrack', 0)"></span>
+          <span class="dot" onclick="goToSlide('paginasCarouselTrack', 1)"></span>
+          <span class="dot" onclick="goToSlide('paginasCarouselTrack', 2)"></span>
+          <span class="dot" onclick="goToSlide('paginasCarouselTrack', 3)"></span>
+          <span class="dot" onclick="goToSlide('paginasCarouselTrack', 4)"></span>
+          <span class="dot" onclick="goToSlide('paginasCarouselTrack', 5)"></span>
+        </div>
+        <button class="carousel-btn" onclick="slideCarousel('paginasCarouselTrack', 1)" aria-label="Próxima página">›</button>
+      </div>
+      <div class="carousel-hint">👉 Deslize para folhear as páginas do livro</div>
     </div>
   </div>
 </section>
@@ -486,5 +644,48 @@ footer a{color:var(--ouro-claro)}
   <a href="https://pay.cakto.com.br/sdaedkb_1096417" class="btn">GARANTIR ACESSO</a>
 </div>
 
+<script>
+function initCarousel(trackId, dotsId) {
+  const track = document.getElementById(trackId);
+  const dotsWrap = document.getElementById(dotsId);
+  if (!track || !dotsWrap) return;
+  const dots = dotsWrap.querySelectorAll('.dot');
+
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const firstItem = track.querySelector(':scope > *');
+      if (!firstItem) return;
+      const itemWidth = firstItem.offsetWidth + 14;
+      const activeIdx = Math.min(dots.length - 1, Math.max(0, Math.round(track.scrollLeft / itemWidth)));
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIdx);
+      });
+    }, 40);
+  }, { passive: true });
+}
+
+function slideCarousel(trackId, dir) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  const firstItem = track.querySelector(':scope > *');
+  const step = firstItem ? firstItem.offsetWidth + 14 : 300;
+  track.scrollBy({ left: dir * step, behavior: 'smooth' });
+}
+
+function goToSlide(trackId, index) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  const firstItem = track.querySelector(':scope > *');
+  const step = firstItem ? firstItem.offsetWidth + 14 : 300;
+  track.scrollTo({ left: index * step, behavior: 'smooth' });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCarousel('appCarouselTrack', 'appCarouselDots');
+  initCarousel('paginasCarouselTrack', 'paginasCarouselDots');
+});
+</script>
 </body>
 </html>
