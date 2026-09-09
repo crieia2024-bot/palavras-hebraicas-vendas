@@ -7,11 +7,11 @@
 <meta name="description" content="400 palavras do hebraico bíblico explicadas com número de Strong, raiz e significado profundo para seus estudos bíblicos. 715 páginas + Mini App interativo por R$ 19,90.">
 <meta property="og:title" content="Palavras Hebraicas — Dicionário Devocional do Hebraico Bíblico">
 <meta property="og:description" content="Descubra a profundidade do texto original no seu celular. 400 palavras explicadas + Mini App leitor interativo por R$ 19,90.">
-<meta property="og:image" content="img/capa.jpg?v=1">
+<meta property="og:image" content="img/capa.jpg?v=2">
 <meta property="og:type" content="product">
-<link rel="icon" type="image/png" href="favicon.png?v=1">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1">
-<meta name="theme-color" content="#0d1722">
+<link rel="icon" type="image/png" href="favicon.png?v=2">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#0b131c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
    ========================================================================== */
 :root{
   --azul-noite:#0b131c; --azul-escuro:#122130; --azul:#1c354d; --azul-claro:#2b4d6e;
-  --ouro:#c59b27; --ouro-claro:#eecb70; --ouro-fino:#fbf0cf;
+  --ouro:#c59b27; --ouro-claro:#fae19c; --ouro-fino:#fff4d4;
   --creme:#faf7f2; --creme-cartao:#f2ebe0; --pergaminho:#f8f2e6;
   --tinta:#141f2b; --tinta-fraca:#485c70;
   --alerta:#a33b1f; --destaque:#1b6348;
@@ -47,6 +47,11 @@ h3{font-size:20px;font-weight:700;color:var(--azul-escuro)}
 p{margin-bottom:18px}
 strong{font-weight:700;color:var(--azul-escuro)}
 section{padding:52px 0}
+
+/* Garantir contraste do strong em fundos escuros */
+.hero strong, .canal strong, .dentro strong, .app-section strong, .barra strong {
+  color: var(--ouro-claro) !important;
+}
 
 /* ------------------------------------------------------------------ hero / topo */
 .hero{
@@ -137,21 +142,39 @@ section{padding:52px 0}
 }
 .app-section h2{color:var(--ouro-claro)}
 .app-section p{color:#d5e2ec}
-.app-mockup-wrapper{
-  margin:28px auto;max-width:540px;
+
+/* Galeria de 3 celulares do Mini App */
+.app-tripla-celular{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px auto 20px;max-width:620px;
 }
-.app-mockup-wrapper img{
-  border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.6);
-  border:1.5px solid rgba(197,155,39,.4);margin:0 auto;
+.app-card-celular{
+  background:rgba(255,255,255,.04);border:1px solid rgba(197,155,39,.35);
+  border-radius:12px;padding:8px 8px 12px;display:flex;flex-direction:column;
 }
-.app-badges{
-  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;text-align:left;
+.app-card-celular img{
+  border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.6);
+  border:1px solid rgba(197,155,39,.25);width:100%;aspect-ratio:9/16;object-fit:cover;
 }
-.app-badge-item{
+.app-card-celular h4{
+  font-family:var(--serif);font-size:14px;color:var(--ouro-claro);margin:10px 0 4px;line-height:1.2;
+}
+.app-card-celular span{
+  font-size:12px;color:#c0d2e2;line-height:1.35;display:block;
+}
+
+.app-recursos-grid{
+  display:grid;grid-template-columns:1fr;gap:14px;margin-top:24px;text-align:left;
+}
+.app-recurso-box{
   background:rgba(255,255,255,.05);border:1px solid rgba(197,155,39,.25);
-  border-radius:8px;padding:14px;font-size:15px;
+  border-left:4px solid var(--ouro);border-radius:8px;padding:16px 18px;font-size:16px;
 }
-.app-badge-item b{color:var(--ouro-claro);display:block;margin-bottom:4px;font-size:16px}
+.app-recurso-box b{
+  color:var(--ouro-claro);display:block;font-size:18px;margin-bottom:4px;
+}
+.app-recurso-box p{
+  margin:0;font-size:15px;color:#d5e2ec;line-height:1.5;
+}
 
 /* --------------------------------------------------------------- solução */
 .solucao ul{list-style:none}
@@ -238,7 +261,7 @@ footer a{color:var(--ouro-claro)}
   .logo{width:116px;height:116px}
   .btn{width:auto;min-width:420px;margin:0 auto;font-size:22px;min-height:72px}
   .preco .por{font-size:54px}
-  .app-badges{grid-template-columns:repeat(4,1fr)}
+  .app-recursos-grid{grid-template-columns:1fr 1fr}
   .pilares{grid-template-columns:1fr 1fr}
   .paginas{grid-template-columns:repeat(3,1fr)}
   .numeros{grid-template-columns:repeat(4,1fr)}
@@ -250,14 +273,14 @@ footer a{color:var(--ouro-claro)}
 
 <header class="hero">
   <div class="env">
-    <img class="logo" src="img/logo.png?v=1" alt="Logo Palavras Hebraicas">
+    <img class="logo" src="img/logo.png?v=2" alt="Logo Palavras Hebraicas">
     <div class="selo">Estudo Bíblico & Raízes Originais</div>
     
-    <div class="combo-tag">📖 E-book Completo + 📱 Mini App Interativo</div>
+    <div class="combo-tag">📖 E-book Completo (715 págs) + 📱 Mini App no Celular</div>
 
     <div class="hero-dupla">
-      <img class="capa" src="img/capa.jpg?v=1" alt="Capa do livro Palavras Hebraicas">
-      <img class="app-preview" src="img/app_leitor_mobile.jpg?v=1" alt="Mini App leitor interativo no celular">
+      <img class="capa" src="img/capa.jpg?v=2" alt="Capa do livro Palavras Hebraicas">
+      <img class="app-preview" src="img/app_leitor_mobile.jpg?v=2" alt="Mini App leitor interativo no celular">
     </div>
 
     <h1>Você não precisa saber hebraico para entender a profundidade da Bíblia</h1>
@@ -301,30 +324,45 @@ footer a{color:var(--ouro-claro)}
 <!-- ----------------------------------------------------------- app destaque -->
 <section class="app-section">
   <div class="env">
-    <div class="selo" style="border-color:var(--ouro);color:var(--ouro-claro)">Tecnologia & Estudo</div>
-    <h2>O Mini App Interativo no seu Celular</h2>
-    <p>Além do PDF completo de 715 páginas, você ganha acesso instantâneo ao leitor interativo digital, pronto para usar no celular, tablet ou computador.</p>
+    <div class="selo" style="border-color:var(--ouro);color:var(--ouro-claro)">Tecnologia & Praticidade</div>
+    <h2>O que você faz no Mini App Interativo</h2>
+    <p>Além do PDF com 715 páginas em alta definição, você recebe o Mini App pronto para abrir no celular, tablet ou computador sem ocupar a memória do seu aparelho:</p>
 
-    <div class="app-mockup-wrapper">
-      <img src="img/app_desktop.jpg?v=1" alt="Aplicativo interativo Palavras Hebraicas">
+    <!-- Galeria de 3 celulares com prints reais do app -->
+    <div class="app-tripla-celular">
+      <div class="app-card-celular">
+        <img src="img/app_leitor_mobile.jpg?v=2" alt="Leitor Interativo e Memorizador de Página">
+        <h4>1. Leitor & Marcador</h4>
+        <span>Salva automaticamente onde você parou de ler.</span>
+      </div>
+      <div class="app-card-celular">
+        <img src="img/app_busca_mobile.jpg?v=2" alt="Busca Rápida de Palavras e Strong">
+        <h4>2. Busca Rápida</h4>
+        <span>Busque por português, hebraico ou Strong em 1s.</span>
+      </div>
+      <div class="app-card-celular">
+        <img src="img/app_indice_mobile.jpg?v=2" alt="Índice Visual das 22 Letras">
+        <h4>3. Índice & Sumário</h4>
+        <span>Navegue de Álef a Tav com significado de cada letra.</span>
+      </div>
     </div>
 
-    <div class="app-badges">
-      <div class="app-badge-item">
-        <b>🔍 Busca Rápida</b>
-        Encontre qualquer palavra ou versículo em menos de 2 segundos.
+    <div class="app-recursos-grid">
+      <div class="app-recurso-box">
+        <b>🔍 Busca Instantânea Inteligente</b>
+        <p>Digite qualquer termo em português (<em>amor, paz, graça</em>), em hebraico (<em>shalom, chesed</em>) ou pelo código Strong (<em>H7965</em>). Encontre a palavra exata em menos de 1 segundo com filtros rápidos (Principais, Nomes de Deus).</p>
       </div>
-      <div class="app-badge-item">
-        <b>📑 Índice de A a Z</b>
-        Navegue facilmente pelas 22 letras do alfabeto hebraico.
+      <div class="app-recurso-box">
+        <b>📑 Índice Visual das 22 Letras (Alefbet)</b>
+        <p>Navegue pelas 22 seções de Álef a Tav conhecendo o significado pictográfico de cada letra e acessando todos os seus verbetes com um único toque.</p>
       </div>
-      <div class="app-badge-item">
-        <b>🔖 Marcador & Zoom</b>
-        Salve seus estudos favoritos e ajuste o zoom perfeito para leitura.
+      <div class="app-recurso-box">
+        <b>🔖 Salva Automaticamente Onde Parou</b>
+        <p>Fechou o aplicativo? Não tem problema. Ao abrir novamente no seu celular, ele lembra exatamente a página e o estudo em que você estava.</p>
       </div>
-      <div class="app-badge-item">
-        <b>📱 Sem Instalação</b>
-        Funciona direto no navegador do celular, leve e sem ocupar memória.
+      <div class="app-recurso-box">
+        <b>📖 Sumário Completo & Zoom Personalizado</b>
+        <p>Acesse anexos, tabelas de pronúncia, aumente a letra no modo flutuante e alterne entre os modos de visualização confortáveis para o dia ou para a noite.</p>
       </div>
     </div>
   </div>
@@ -368,30 +406,30 @@ footer a{color:var(--ouro-claro)}
 <section class="dentro">
   <div class="env">
     <h2>Veja por dentro</h2>
-    <p>Exemplos reais das páginas do livro em alta resolução:</p>
+    <p>Páginas reais do livro em alta resolução com ilustrações, análise de passagens e verbetes:</p>
     <div class="paginas">
       <figure>
-        <img src="img/p_chesed.jpg?v=1" alt="Verbete Chesed amor leal" loading="lazy">
-        <figcaption>חֶסֶד (Chesed) · Amor Leal</figcaption>
+        <img src="img/p_el_shaddai.jpg?v=2" alt="Página ilustrada El Shaddai Deus Todo Poderoso" loading="lazy">
+        <figcaption>אֵל שַׁדַּי (El Shaddai) · Título Ilustrado</figcaption>
       </figure>
       <figure>
-        <img src="img/p_shalom.jpg?v=1" alt="Verbete Shalom integridade e paz" loading="lazy">
-        <figcaption>שָׁלוֹם (Shalom) · Plenitude</figcaption>
+        <img src="img/p_chesed.jpg?v=2" alt="Verbete Chesed amor leal" loading="lazy">
+        <figcaption>חֶסֶד (Chesed) · Estrutura & Raiz</figcaption>
       </figure>
       <figure>
-        <img src="img/p_shema.jpg?v=1" alt="Verbete Shema ouvir e obedecer" loading="lazy">
-        <figcaption>שְׁמַע (Shema) · Ouvir Ativo</figcaption>
+        <img src="img/p_shalom.jpg?v=2" alt="Passagens bíblicas sobre Shalom no original" loading="lazy">
+        <figcaption>שָׁלוֹם (Shalom) · Estudo de Passagens</figcaption>
       </figure>
       <figure>
-        <img src="img/p_elohim.jpg?v=1" alt="Verbete Elohim Deus criador" loading="lazy">
-        <figcaption>אֱלֹהִים (Elohim) · Deus Criador</figcaption>
+        <img src="img/p_shema.jpg?v=2" alt="Exegese de passagens como Deuteronômio 6 no Shema" loading="lazy">
+        <figcaption>שְׁמַע (Shema) · Texto-Âncora</figcaption>
       </figure>
       <figure>
-        <img src="img/p_alefbet.jpg?v=1" alt="Tabela do alfabeto hebraico" loading="lazy">
-        <figcaption>Tabela do Alfabeto Hebraico</figcaption>
+        <img src="img/p_alefbet.jpg?v=2" alt="Tabela do alfabeto hebraico" loading="lazy">
+        <figcaption>Tabela Geral do Alfabeto Hebraico</figcaption>
       </figure>
       <figure>
-        <img src="img/p_alef.jpg?v=1" alt="Abertura da letra Álef" loading="lazy">
+        <img src="img/p_alef.jpg?v=2" alt="Abertura ilustrada da letra Álef" loading="lazy">
         <figcaption>Abertura da Letra Álef</figcaption>
       </figure>
     </div>
@@ -418,7 +456,7 @@ footer a{color:var(--ouro-claro)}
     <h2>R$ 19,90 é um valor simbólico</h2>
     <p>São 715 páginas de pesquisa com 400 verbetes minuciosos e um Mini App interativo desenvolvido exclusivamente para facilitar seus estudos.</p>
     <p>Os vídeos e estudos bíblicos do canal continuam 100% gratuitos para todos. Mas pesquisar no texto original, produzir o material e manter a estrutura exige tempo e dedicação.</p>
-    <p><strong>Ao garantir o seu exemplar por R$ 19,90</strong>, você leva um material de consulta para a vida toda e ajuda diretamente o canal a continuar produzindo novos estudos bíblicos para milhares de pessoas.</p>
+    <p><strong style="color:var(--ouro-claro) !important;">Ao garantir o seu exemplar por R$ 19,90</strong>, você leva um material de consulta para a vida toda e ajuda diretamente o canal a continuar produzindo novos estudos bíblicos para milhares de pessoas.</p>
   </div>
 </section>
 
@@ -448,7 +486,7 @@ footer a{color:var(--ouro-claro)}
 
 <footer>
   <div class="env">
-    <img src="img/logo.png?v=1" alt="" style="width:58px;height:58px;border-radius:50%;margin:0 auto 12px;opacity:.9">
+    <img src="img/logo.png?v=2" alt="" style="width:58px;height:58px;border-radius:50%;margin:0 auto 12px;opacity:.9">
     <p>Palavras Hebraicas · Edição 2026</p>
     <p style="margin-top:8px"><a href="#">Contato</a> · <a href="#">Termos de Uso</a> · <a href="#">Aviso Teológico</a></p>
   </div>
