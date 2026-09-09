@@ -7,7 +7,7 @@ Página estática em um único arquivo HTML. Sem build, sem frameworks e sem dep
 - **Site publicado (Vercel):** https://palavras-hebraicas-vendas.vercel.app
 - **Repositório GitHub:** https://github.com/crieia2024-bot/palavras-hebraicas-vendas
 - **Mini App Interativo de Demonstração:** https://ebook-palavras-hebraicas.vercel.app/
-- **Checkout:** Configure o link do checkout nos botões de compra (`href` em `index.html`).
+- **Checkout Cakto:** `https://pay.cakto.com.br/sdaedkb_1096417`
 
 ---
 
